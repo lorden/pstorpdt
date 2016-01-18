@@ -1,0 +1,50 @@
+@import url(https://fonts.googleapis.com/css?family=Francois+One);
+
+* {
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #9AD3DE;
+  color: #FFFFFF;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  font-family: "Francois One", Helvetica, Arial, serif;
+  display: flex;
+  flex: 1 0 auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+main h1 {
+  font-size: 20rem;
+  text-transform: uppercase;
+}
+
+main p {
+  font-size: 5rem;
+}
+
+footer {
+  width: 100%;
+  background: #89bdd3;
+  color: #FFFFFF;
+  font-family: "Francois One", Helvetica, Arial, serif;
+  font-size: 2vh;
+  text-align: right;
+}
+
+footer p {
+  padding: 10px;
+}
+
+footer a {
+  color: #FFFFFF;
+}
