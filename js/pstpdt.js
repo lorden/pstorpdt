@@ -1,11 +1,23 @@
 function pstOrPdt(timestamp) {
-    var pdtRanges = [
-        [1394359200, 1414918800],
-        [1425808800, 1446368400],
-        [1457863200, 1478422800],
-        [1489312800, 1509872400],
-        [1520762400, 1572771600],
-    ];
+   let pdtRanges = [];
+   let start = 1394359200;
+   let end = 1414918800;
+   let leap = 3;
+   let regularSeconds = 31449600;
+   let leapSeconds = 32054400;
+   for(let i=0;i<100;i++) {
+       if (leap == 4) {
+           start = start + leapSeconds;
+           end = end + leapSeconds;
+           leap = 0;
+       } else {
+           start = start + regularSeconds;
+           end = end + regularSeconds;
+           leap += 1;
+       }
+       pdtRanges.push([start, end]);
+    }
+
 
     for (i in pdtRanges) {
         if (timestamp >= pdtRanges[i][0] && timestamp < pdtRanges[i][1]) {
